@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>CNCLab Algoritam za pakovanje</title>
+  <link href='css/demo.css' rel='stylesheet' type='text/css' media='screen' />
+</head>
+<body>
+
+  <h1>CNCLab Algoritam za rezanje materijala</h1>
+
+<div id="settings">
+<div class='examples'>
+  <label for='examples'>Primjeri: </label>
+  <select id='examples'>
+    <option value='simple'>jednostavno</option>
+    <option value='square'>kvadratno</option>
+    <option value='tall'>visoko</option>
+    <option value='wide'>široko</option>
+    <option value='tallwide'>visoko i široko</option>
+    <option value='power2'>stepeni dvojke</option>
+    <option value='oddeven'>parno i neparno</option>
+    <option value='complex'>kompleksno</option>
+  </select>
+</div>
+
+<div class='blocks'>
+  <label for='blocks'>Blokovi: <span class='example'><b>Š</b>x<b>V</b>[x<b>N</b>]</span></label>
+  <textarea id='blocks' rows=12></textarea>
+</div>
+
+<div class='size'>
+  <label for='size'>Veličina: </label>
+  <select id='size'>
+    <option>500x500</option>
+    <option>800x600</option>
+    <option selected>automatsko</option>
+  </select>
+</div>
+
+<div class='sort'>
+  <label for='sort'>Sortiranje: </label>
+  <select id='sort'>
+    <option>bez sortiranja</option>
+    <option>širina</option>
+    <option>visina</option>
+    <option selected>najveća strana</option>
+    <option>površina</option>
+    <option>nasumično</option>
+  </select>
+</div>
+
+<div class='color'>
+  <label for='color'>Boja: </label>
+  <select id='color'>
+    <option>pastel</option>
+    <option>osnovne</option>
+    <option>siva</option>
+    <option>vintage</option>
+    <option>solarizirane</option>
+    <option>bez boje</option>
+  </select>
+</div>
+
+<div class="ratio">
+  Popunjeno: <span id='ratio'>0</span>%
+</div>
+
+<div id="nofit" class="nofit">
+  <!-- Ovdje će biti prikazani blokovi koji se ne mogu uklopiti -->
+</div>
+</div>
+  <div id="packing">
+    <canvas id="canvas">
+      <div id="unsupported">
+        Nažalost, ovaj primjer se ne može pokrenuti jer vaš preglednik ne podržava &lt;canvas&gt; element.
+      </div>
+    </canvas>
+  </div>
+  <script src='js/jquery.js'></script>
+  <script src='js/packer.js'></script>
+  <script src='js/packer.growing.js'></script>
+  <script src='js/demo.js'></script>
+</body>
+</html>
